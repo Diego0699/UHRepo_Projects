@@ -1,0 +1,9 @@
+.footercolor{
+    background: linear-gradient(90deg, #EB5757 0%, #000000 100%) !important;
+}
+.wtext {
+    color: white !important;
+}
+footer{
+    margin-top: 20px;
+}

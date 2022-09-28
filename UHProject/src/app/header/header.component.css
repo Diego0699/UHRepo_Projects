@@ -1,0 +1,13 @@
+.navcolor{
+    background: linear-gradient(90deg, #EB5757 0%, #000000 100%) !important;
+}
+.active2{
+    background: linear-gradient(90deg, #9a0f0f 0%, #9a0f0f 100%);
+    color: red;
+}
+.wtext {
+    color: white !important;
+}
+.wtext:hover{
+    color: red !important;
+}
