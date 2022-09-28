@@ -8,7 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ProyectoUH';
   loadedFeature ='index';
-  onNavigate(feature:string){
-    this.loadedFeature=feature;
-  }
+  
 }

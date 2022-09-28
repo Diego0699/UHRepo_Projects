@@ -1,14 +1,8 @@
-<app-header (featureSelect)="onNavigate($event)"></app-header>
+<app-header></app-header>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            
-            <app-inicio *ngIf="loadedFeature ==='index'"></app-inicio>
-            <app-productos *ngIf="loadedFeature ==='productos'"></app-productos> 
-            <!-- Investigar por que no se despliega dropdown -->
-            <app-acerca *ngIf="loadedFeature ==='acerca'"></app-acerca>
-            <app-carrito *ngIf="loadedFeature ==='carrito'"></app-carrito>
-            <app-sesion *ngIf="loadedFeature ==='sesion'"></app-sesion>
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>

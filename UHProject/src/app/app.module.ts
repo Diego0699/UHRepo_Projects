@@ -18,7 +18,17 @@ import { SesionComponent } from './sesion/sesion.component';
 import { InicioListComponent } from './inicio/inicio-list/inicio-list.component';
 import { InicioItemComponent } from './inicio/inicio-list/inicio-item/inicio-item.component';
 import { InicioItem2Component } from './inicio/inicio-list/inicio-item2/inicio-item2.component';
+import { RouterModule, Routes } from '@angular/router';
+import { RegistrarComponent } from './sesion/registrar/registrar.component';
 
+const appRoutes: Routes=[
+  {path:'', component:InicioComponent},
+  {path:'acerca', component:AcercaComponent},
+  {path:'productos', component:ProductosComponent},
+  {path:'carrito', component:CarritoComponent},
+  {path:'sesion', component:SesionComponent},
+  
+] 
 
 @NgModule({
   declarations: [
@@ -36,11 +46,13 @@ import { InicioItem2Component } from './inicio/inicio-list/inicio-item2/inicio-i
     SesionComponent,
     InicioListComponent,
     InicioItemComponent,
-    InicioItem2Component
+    InicioItem2Component,
+    RegistrarComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,23 +2,18 @@
 <nav class="navbar navbar-default" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand wtext" href="#" (click)="onSelect('index')">TechnoFlash</a>
+        
+        <a class="navbar-brand wtext" href="#" routerLink="/">TechnoFlash</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse navcolor">
         <ul class="nav navbar-nav" >
-            <li class="active2"><a href="#" class="wtext" (click)="onSelect('index')">Inicio</a></li>
-            <li ><a href="#" class="wtext" (click)="onSelect('acerca')">Acerca</a></li>
-            <li class="dropdown"
+            <li  routerLinkActive="active2" [routerLinkActiveOptions]="{exact:true}"><a  class="wtext" routerLink="/">Inicio</a></li>
+            <li  routerLinkActive="active2"><a  class="wtext" routerLink="acerca">Acerca</a></li>
+            <li  routerLinkActive="active2" class="dropdown"
             appDropdown>
-                <a href="#" class="dropdown-toggle wtext" (click)="onSelect('productos')" data-toggle="dropdown">Productos<b class="caret"></b></a>
+                <a routerLink="productos"  class="dropdown-toggle wtext"  data-toggle="dropdown">Productos<b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href="#">Placas Madres</a></li>
                     <li><a href="#">Procesadores</a></li>
@@ -29,7 +24,7 @@
                     <li><a href="#">Tarjetas Graficas</a></li>
                 </ul>
             </li>
-            <li><a href="#" class="wtext" (click)="onSelect('carrito')">Carrito</a></li>
+            <li routerLinkActive="active2"><a  class="wtext" routerLink="carrito">Carrito</a></li>
         </ul>
         <form class="navbar-form navbar-left" role="search">
             <div class="form-group">
@@ -38,7 +33,7 @@
             <button type="submit" class="btn btn-primary" style="margin-left: 5px;">Buscar</button>
         </form>
         <ul class="nav navbar-nav navbar-right ">
-            <li><a href="#" class="wtext" (click)="onSelect('sesion')">Iniciar Sesión </a></li>
+            <li routerLinkActive="active2"><a  class="wtext" routerLink="sesion">Iniciar Sesión </a></li>
         </ul>
     </div><!-- /.navbar-collapse -->
 </nav>
