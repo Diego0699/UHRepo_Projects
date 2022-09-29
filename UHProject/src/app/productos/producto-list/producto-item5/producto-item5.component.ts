@@ -3,12 +3,12 @@ import { Product } from '../../producto.model';
 import { ProductService } from '../../producto.service';
 
 @Component({
-  selector: 'app-producto-item',
-  templateUrl: './producto-item.component.html',
-  styleUrls: ['./producto-item.component.css']
+  selector: 'app-producto-item5',
+  templateUrl: './producto-item5.component.html',
+  styleUrls: ['./producto-item5.component.css']
 })
-export class ProductoItemComponent implements OnInit {
-  @Input()product:Product;
+export class ProductoItem5Component implements OnInit {
+  @Input()product5:Product;
   
 
   constructor(private productService:ProductService) { }
@@ -16,7 +16,7 @@ export class ProductoItemComponent implements OnInit {
   ngOnInit(): void {
   }
    onSelected(){
-     this.productService.productSelected.emit(this.product)
+     this.productService.productSelected.emit(this.product5)
      
     
    }
