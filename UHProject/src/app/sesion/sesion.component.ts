@@ -12,7 +12,6 @@ export class SesionComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onRegister(evento:Event){
-    this.Registrar=true;
-  }
+ 
+    
 }
