@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sesion',
@@ -6,12 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sesion.component.css']
 })
 export class SesionComponent implements OnInit {
-  Registrar=false;
+ 
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
+  onRegister(){
+    this.router.navigate(['registro']);
+  }
  
-    
 }
