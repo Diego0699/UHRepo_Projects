@@ -19,24 +19,19 @@ import { InicioListComponent } from './inicio/inicio-list/inicio-list.component'
 import { InicioItemComponent } from './inicio/inicio-list/inicio-item/inicio-item.component';
 import { InicioItem2Component } from './inicio/inicio-list/inicio-item2/inicio-item2.component';
 import { RouterModule, Routes } from '@angular/router';
-import { RegistrarComponent } from './sesion/registrar/registrar.component';
+
 import { ProductoItem2Component } from './productos/producto-list/producto-item2/producto-item2.component';
 import { ProductoItem3Component } from './productos/producto-list/producto-item3/producto-item3.component';
 import { ProductoItem4Component } from './productos/producto-list/producto-item4/producto-item4.component';
 import { ProductoItem5Component } from './productos/producto-list/producto-item5/producto-item5.component';
 import { ProductoItem6Component } from './productos/producto-list/producto-item6/producto-item6.component';
 import { ProductoItem7Component } from './productos/producto-list/producto-item7/producto-item7.component';
+import { RegistroComponent } from './registro/registro.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
-const appRoutes: Routes=[
-  {path:'', component:InicioComponent},
-  {path:'acerca', component:AcercaComponent},
-  {path:'productos', component:ProductosComponent},
-  {path:'carrito', component:CarritoComponent},
-  {path:'sesion', component:SesionComponent},
-  
-] 
+
 
 @NgModule({
   declarations: [
@@ -55,20 +50,20 @@ const appRoutes: Routes=[
     InicioListComponent,
     InicioItemComponent,
     InicioItem2Component,
-    RegistrarComponent,
     ProductoItem2Component,
     ProductoItem3Component,
     ProductoItem4Component,
     ProductoItem5Component,
     ProductoItem6Component,
     ProductoItem7Component,
-  
+    RegistroComponent,
+
    
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
