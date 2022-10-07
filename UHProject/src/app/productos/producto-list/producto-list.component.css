@@ -1,7 +1,10 @@
-.bgh3{
-    background-color: #380d0d;
+
+.btnh{
+    width:380px;
+    background-color: #963232;
+    border-color: black;
     color:white;
     text-align: center;
-    border-radius: 4px;
+    border-radius: 2px;
     font-family:Arial, Helvetica, sans-serif;
 }

@@ -1,16 +1,19 @@
-<div 
-class="list-group-item clearfix">
-    <!-- (click)="onSelected()"> -->
+<a 
+class="list-group-item clearfix"
+style="cursor: pointer;"
+[routerLink]="[index]"
+routerLinkActive="active">
     <div class="pull-left">
         <h4 class="list-group-item-heading"> {{product7.name}}</h4>
-        <p class="list-group-item-text"><strong>{{product7.price}}</strong></p>
-        <button class="btn btn-danger btn-sm">Añadir al Carrito</button>
+        <p class="list-group-item-text">{{product7.price}}</p>
+        <span>Click para más información</span>
+        <!-- <button class="btn btn-danger btn-sm">Añadir al Carrito</button> -->
     </div>
     <span class="pull-right">
         <img 
         [src]="product7.imagePath"
         alt="nombre producto"
         class="img-responsive"
-        style="max-height: 100px;">
+        style="max-height: 50px;">
     </span>
-</div>
+</a>
