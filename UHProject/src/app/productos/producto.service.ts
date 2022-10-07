@@ -168,8 +168,8 @@ export class ProductService{
         return this.products2.slice();
         
     }
-    getProduct2(index2:number){
-        return this.products2[index2]
+    getProduct2(index:number){
+        return this.products2[index]
     }
 
 
