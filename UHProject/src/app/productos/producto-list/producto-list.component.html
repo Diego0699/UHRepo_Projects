@@ -1,4 +1,226 @@
-<div class="container">
+
+
+<div class="row" style="margin: auto;">
+    <hr>
+    <div class="col-xs-12" >
+        <div class="dropdown row" 
+        appDropdown>
+            <button class="btn btn-secondary dropdown-toggle btnh" 
+            type="button" 
+            id="dropdownMenuButton" 
+            data-toggle="dropdown" aria-haspopup="true" 
+            aria-expanded="false">
+                Placas Madres
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item"> 
+                    <!-- <div class="container"> -->
+                        <!-- <div class="row"> -->
+                            <div class="col-xs-12">
+                                <div class="row">
+                                    <app-producto-item
+                                    *ngFor="let productEl of products;let i = index"
+                                    [product]="productEl"
+                                    [index]="i">
+                                    </app-producto-item>
+                                </div>
+                            </div>
+                        <!-- </div> -->
+                    <!-- </div> -->
+                </a>
+            </div>
+        </div>
+        <div class="dropdown row" 
+        appDropdown>
+            <button class="btn btn-secondary dropdown-toggle btnh" 
+            type="button" 
+            id="dropdownMenuButton" 
+            data-toggle="dropdown" aria-haspopup="true" 
+            aria-expanded="false">
+                Procesadores
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item"> 
+                    <!-- <div class="container"> -->
+                        <!-- <div class="row"> -->
+                            <div class="col-xs-12">
+                                <div class="row">
+                                    <app-producto-item2
+                                    *ngFor="let productEl2 of products2;let i2 = index"
+                                    [product2]="productEl2"
+                                    [index]="i2">
+                                    </app-producto-item2>
+                                </div>
+                            </div>
+                        <!-- </div> -->
+                    <!-- </div> -->
+                </a>
+            </div>
+        </div>
+        <div class="dropdown row" 
+        appDropdown>
+            <button class="btn btn-secondary dropdown-toggle btnh" 
+            type="button" 
+            id="dropdownMenuButton" 
+            data-toggle="dropdown" aria-haspopup="true" 
+            aria-expanded="false">
+                Memorias Ram
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item"> 
+                    <!-- <div class="container"> -->
+                        <!-- <div class="row"> -->
+                            <div class="col-xs-12">
+                                <div class="row">
+                                    <app-producto-item3
+                                    *ngFor="let productEl3 of products3;let i3 = index"
+                                    [product3]="productEl3"
+                                    [index]="i3">
+                                    </app-producto-item3>
+                                </div>
+                            </div>
+                        <!-- </div> -->
+                    <!-- </div> -->
+                </a>
+            </div>
+        </div>
+        <div class="dropdown row" 
+        appDropdown>
+            <button class="btn btn-secondary dropdown-toggle btnh" 
+            type="button" 
+            id="dropdownMenuButton" 
+            data-toggle="dropdown" aria-haspopup="true" 
+            aria-expanded="false">
+                Almacenamiento
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item"> 
+                    <!-- <div class="container"> -->
+                        <!-- <div class="row"> -->
+                            <div class="col-xs-12">
+                                <div class="row">
+                                    <app-producto-item4
+                                    *ngFor="let productEl4 of products4;let i = index"
+                                    [product4]="productEl4"
+                                    [index4]="i">
+                                    </app-producto-item4>
+                                </div>
+                            </div>
+                        <!-- </div> -->
+                    <!-- </div> -->
+                </a>
+            </div>
+        </div> 
+        <div class="dropdown row" 
+        appDropdown>
+            <button class="btn btn-secondary dropdown-toggle btnh" 
+            type="button" 
+            id="dropdownMenuButton" 
+            data-toggle="dropdown" aria-haspopup="true" 
+            aria-expanded="false">
+                Enfriamiento
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item"> 
+                    <!-- <div class="container"> -->
+                        <!-- <div class="row"> -->
+                            <div class="col-xs-12">
+                                <div class="row">
+                                    <app-producto-item5
+                                    *ngFor="let productEl5 of products5;let i5 = index"
+                                    [product5]="productEl5"
+                                    [index]="i5">
+                                    </app-producto-item5>
+                                </div>
+                            </div>
+                        <!-- </div> -->
+                    <!-- </div> -->
+                </a>
+            </div>
+        </div>
+        <div class="dropdown row" 
+        appDropdown>
+            <button class="btn btn-secondary dropdown-toggle btnh" 
+            type="button" 
+            id="dropdownMenuButton" 
+            data-toggle="dropdown" aria-haspopup="true" 
+            aria-expanded="false">
+                Fuentes de Poder
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item"> 
+                    <!-- <div class="container"> -->
+                        <!-- <div class="row"> -->
+                            <div class="col-xs-12">
+                                <div class="row">
+                                    <app-producto-item6
+                                    *ngFor="let productEl6 of products6;let i6 = index"
+                                    [product6]="productEl6"
+                                    [index]="i6">
+                                    </app-producto-item6>
+                                </div>
+                            </div>
+                        <!-- </div> -->
+                    <!-- </div> -->
+                </a>
+            </div>
+        </div>
+        <div class="dropdown row" 
+        appDropdown>
+            <button class="btn btn-secondary dropdown-toggle btnh" 
+            type="button" 
+            id="dropdownMenuButton" 
+            data-toggle="dropdown" aria-haspopup="true" 
+            aria-expanded="false">
+                Tarjetas Graficas
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item"> 
+                    <!-- <div class="container"> -->
+                        <!-- <div class="row"> -->
+                            <div class="col-xs-12">
+                                <div class="row">
+                                    <app-producto-item7
+                                    *ngFor="let productEl7 of products7;let i7 = index"
+                                    [product7]="productEl7"
+                                    [index]="i7">
+                                    </app-producto-item7>
+                                </div>
+                            </div>
+                        <!-- </div> -->
+                    <!-- </div> -->
+                </a>
+            </div>
+        </div>    
+    </div>
+</div>
+
+    <!-- <li class="dropdown">
+        <a class="dropdown-toggle" role="button">Placas Madres <span class="scaret"></span></a>
+        <ul class="dropdown-menu">
+            <div>
+                <a class="dropdown-item"> 
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div class="row">
+                                    <h3 class="bgh3">Placas Madre</h3>
+                                    <hr>
+                                    <app-producto-item
+                                    *ngFor="let productEl of products"
+                                    [product]="productEl">
+                                    </app-producto-item>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+            </div>
+        </ul>
+    </li> -->
+
+<!-- <div class="container">
     <div class="row">
         <div class="col-xs-4">
             <div class="row">
@@ -62,7 +284,7 @@
                 </app-producto-item6>
             </div>
         </div>
-    </div>
+    </div> 
     <div class="row">
         <div class="col-xs-4">
             <div class="row">
@@ -79,8 +301,4 @@
         </div>
         
     </div>
-</div>
-
-
-
-
+</div> -->

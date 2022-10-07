@@ -7,121 +7,216 @@ export class ProductService{
      // Lista Placas Madre
     private products:Product[]=[
         new Product('Intel Core I5',
-        '250,000',
+        750000,
         'https://http2.mlstatic.com/D_NQ_NP_665166-MCR48871458342_012022-V.jpg'),
 
          new Product('Intel Core I9',
-         '420,000',
+         250000,
          'https://www.intel.la/content/dam/www/central-libraries/us/en/images/alder-lake-i9-no12-original.png.rendition.intel.web.864.486.png'),
          new Product('Intel Core I5',
-        '250,000',
+         250000,
         'https://http2.mlstatic.com/D_NQ_NP_665166-MCR48871458342_012022-V.jpg'),
 
          new Product('Intel Core I9',
-         '420,000',
+         250000,
          'https://www.intel.la/content/dam/www/central-libraries/us/en/images/alder-lake-i9-no12-original.png.rendition.intel.web.864.486.png'),
          new Product('Intel Core I5',
-        '250,000',
+         250000,
         'https://http2.mlstatic.com/D_NQ_NP_665166-MCR48871458342_012022-V.jpg')
     
     ];
 
     // Lista Procesadores
     private products2:Product[]=[
-        new Product('INTEL CORE I3 10105F',
-        '¢ 59,000',
-        'https://extremetechcr.com/tienda/15017-home_default/intel-core-i3-10105f.jpg'),
+        new Product('Intel Core I5',
+        300000,
+        'https://http2.mlstatic.com/D_NQ_NP_665166-MCR48871458342_012022-V.jpg'),
 
-         new Product('AMD RYZEN 3 3200G',
-         '¢ 85,000',
-         'https://extremetechcr.com/tienda/20824-home_default/amd-ryzen-3-3200g.jpg'),
-         new Product('INTEL CORE I5 10400F',
-         '¢ 105,000',
-         'https://extremetechcr.com/tienda/11650-home_default/intel-core-i5-10400f.jpg'),
- 
-          new Product('INTEL CORE I7 12700',
-          '¢ 295,000',
-          'https://extremetechcr.com/tienda/19090-home_default/intel-core-i7-12700f.jpg'),
-          new Product('AMD RYZEN 9 5900X',
-          '¢ 290,000',
-          'https://extremetechcr.com/tienda/12202-home_default/amd-ryzen-9-5900x.jpg')
+         new Product('Intel Core I9',
+         250000,
+         'https://www.intel.la/content/dam/www/central-libraries/us/en/images/alder-lake-i9-no12-original.png.rendition.intel.web.864.486.png'),
+         new Product('Intel Core I5',
+         250000,
+        'https://http2.mlstatic.com/D_NQ_NP_665166-MCR48871458342_012022-V.jpg'),
+
+         new Product('Intel Core I9',
+         250000,
+         'https://www.intel.la/content/dam/www/central-libraries/us/en/images/alder-lake-i9-no12-original.png.rendition.intel.web.864.486.png'),
+         new Product('Intel Core I5',
+         250000,
+        'https://http2.mlstatic.com/D_NQ_NP_665166-MCR48871458342_012022-V.jpg')
+    
     ];
      // Lista Placas Ram
     private products3:Product[]=[
-        new Product('Ryzen 5',
-        '250,000',
+        new Product('Intel Core I5',
+        250000,
         'https://http2.mlstatic.com/D_NQ_NP_665166-MCR48871458342_012022-V.jpg'),
 
-         new Product('Asus MotherBoard',
-         '420,000',
-         'https://www.intel.la/content/dam/www/central-libraries/us/en/images/alder-lake-i9-no12-original.png.rendition.intel.web.864.486.png')
+         new Product('Intel Core I9',
+         250000,
+         'https://www.intel.la/content/dam/www/central-libraries/us/en/images/alder-lake-i9-no12-original.png.rendition.intel.web.864.486.png'),
+         new Product('Intel Core I5',
+         250000,
+        'https://http2.mlstatic.com/D_NQ_NP_665166-MCR48871458342_012022-V.jpg'),
+
+         new Product('Intel Core I9',
+         250000,
+         'https://www.intel.la/content/dam/www/central-libraries/us/en/images/alder-lake-i9-no12-original.png.rendition.intel.web.864.486.png'),
+         new Product('Intel Core I5',
+         250000,
+        'https://http2.mlstatic.com/D_NQ_NP_665166-MCR48871458342_012022-V.jpg')
+    
     ];
      // Lista Almacenamiento
     private products4:Product[]=[
-        new Product('Ryzen 5',
-        '250,000',
+        new Product('Intel Core I5',
+        250000,
         'https://http2.mlstatic.com/D_NQ_NP_665166-MCR48871458342_012022-V.jpg'),
 
-         new Product('Asus MotherBoard',
-         '420,000',
-         'https://www.intel.la/content/dam/www/central-libraries/us/en/images/alder-lake-i9-no12-original.png.rendition.intel.web.864.486.png')
+         new Product('Intel Core I9',
+         250000,
+         'https://www.intel.la/content/dam/www/central-libraries/us/en/images/alder-lake-i9-no12-original.png.rendition.intel.web.864.486.png'),
+         new Product('Intel Core I5',
+         250000,
+        'https://http2.mlstatic.com/D_NQ_NP_665166-MCR48871458342_012022-V.jpg'),
+
+         new Product('Intel Core I9',
+         250000,
+         'https://www.intel.la/content/dam/www/central-libraries/us/en/images/alder-lake-i9-no12-original.png.rendition.intel.web.864.486.png'),
+         new Product('Intel Core I5',
+         250000,
+        'https://http2.mlstatic.com/D_NQ_NP_665166-MCR48871458342_012022-V.jpg')
+    
     ];
      // Lista Enfriamiento
     private products5:Product[]=[
-        new Product('Ryzen 5',
-        '250,000',
+        new Product('Intel Core I5',
+        250000,
         'https://http2.mlstatic.com/D_NQ_NP_665166-MCR48871458342_012022-V.jpg'),
 
-         new Product('Asus MotherBoard',
-         '420,000',
-         'https://www.intel.la/content/dam/www/central-libraries/us/en/images/alder-lake-i9-no12-original.png.rendition.intel.web.864.486.png')
+         new Product('Intel Core I9',
+         250000,
+         'https://www.intel.la/content/dam/www/central-libraries/us/en/images/alder-lake-i9-no12-original.png.rendition.intel.web.864.486.png'),
+         new Product('Intel Core I5',
+         250000,
+        'https://http2.mlstatic.com/D_NQ_NP_665166-MCR48871458342_012022-V.jpg'),
+
+         new Product('Intel Core I9',
+         250000,
+         'https://www.intel.la/content/dam/www/central-libraries/us/en/images/alder-lake-i9-no12-original.png.rendition.intel.web.864.486.png'),
+         new Product('Intel Core I5',
+         250000,
+        'https://http2.mlstatic.com/D_NQ_NP_665166-MCR48871458342_012022-V.jpg')
+    
     ];
      // Lista Fuentes de poder
     private products6:Product[]=[
-        new Product('Ryzen 5',
-        '250,000',
+        new Product('Intel Core I5',
+        250000,
         'https://http2.mlstatic.com/D_NQ_NP_665166-MCR48871458342_012022-V.jpg'),
 
-         new Product('Asus MotherBoard',
-         '420,000',
-         'https://www.intel.la/content/dam/www/central-libraries/us/en/images/alder-lake-i9-no12-original.png.rendition.intel.web.864.486.png')
+         new Product('Intel Core I9',
+         250000,
+         'https://www.intel.la/content/dam/www/central-libraries/us/en/images/alder-lake-i9-no12-original.png.rendition.intel.web.864.486.png'),
+         new Product('Intel Core I5',
+         250000,
+        'https://http2.mlstatic.com/D_NQ_NP_665166-MCR48871458342_012022-V.jpg'),
+
+         new Product('Intel Core I9',
+         250000,
+         'https://www.intel.la/content/dam/www/central-libraries/us/en/images/alder-lake-i9-no12-original.png.rendition.intel.web.864.486.png'),
+         new Product('Intel Core I5',
+         250000,
+        'https://http2.mlstatic.com/D_NQ_NP_665166-MCR48871458342_012022-V.jpg')
+    
     ];
     private products7:Product[]=[
-        new Product('Ryzen 5',
-        '250,000',
+        new Product('Intel Core I5',
+        450000,
         'https://http2.mlstatic.com/D_NQ_NP_665166-MCR48871458342_012022-V.jpg'),
 
-         new Product('Asus MotherBoard',
-         '420,000',
-         'https://www.intel.la/content/dam/www/central-libraries/us/en/images/alder-lake-i9-no12-original.png.rendition.intel.web.864.486.png')
+         new Product('Intel Core I9',
+         250000,
+         'https://www.intel.la/content/dam/www/central-libraries/us/en/images/alder-lake-i9-no12-original.png.rendition.intel.web.864.486.png'),
+         new Product('Intel Core I5',
+         250000,
+        'https://http2.mlstatic.com/D_NQ_NP_665166-MCR48871458342_012022-V.jpg'),
+
+         new Product('Intel Core I9',
+         250000,
+         'https://www.intel.la/content/dam/www/central-libraries/us/en/images/alder-lake-i9-no12-original.png.rendition.intel.web.864.486.png'),
+         new Product('Intel Core I5',
+         250000,
+        'https://http2.mlstatic.com/D_NQ_NP_665166-MCR48871458342_012022-V.jpg')
+    
     ];
     constructor(){}
+    
     getProducts(){
         return this.products.slice();
         
     }
+    getProduct(index2:number){
+        return this.products[index2]
+    }
+
+
+
+
     getProducts2(){
         return this.products2.slice();
         
     }
+    getProduct2(index2:number){
+        return this.products2[index2]
+    }
+
+
     getProducts3(){
         return this.products3.slice();
         
     }
+    getProduct3(index3:number){
+        return this.products3[index3]
+    }
+
+
     getProducts4(){
         return this.products4.slice();
         
     }
+    getProduct4(index4:number){
+        return this.products4[index4]
+    }
+
+
+
     getProducts5(){
         return this.products5.slice();
         
     }
+    getProduct5(index5:number){
+        return this.products5[index5]
+    }
+
+
     getProducts6(){
         return this.products6.slice();
         
     }
+    getProduct6(index6:number){
+        return this.products6[index6]
+    }
+
+    
     getProducts7(){
         return this.products7.slice();
         
     }
+    getProduct7(index7:number){
+        return this.products7[index7]
+    }
+
+    
 }

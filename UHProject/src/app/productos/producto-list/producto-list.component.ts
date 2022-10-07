@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Product } from '../producto.model';
 import { ProductService } from '../producto.service';
 
@@ -8,6 +9,7 @@ import { ProductService } from '../producto.service';
   styleUrls: ['./producto-list.component.css']
 })
 export class ProductoListComponent implements OnInit {
+  
 
 
   products:Product[];
@@ -18,7 +20,8 @@ export class ProductoListComponent implements OnInit {
   products6:Product[];
   products7:Product[];
 
-  constructor(private productService:ProductService) { }
+  constructor(private productService:ProductService,
+              private router:Router) { }
 
   ngOnInit() {
     this.products = this.productService.getProducts();

@@ -1,0 +1,16 @@
+.shadow{
+    align-items: center;
+    padding: 5px;
+    -webkit-box-shadow: 4px 13px 32px -16px rgba(230,230,230,1);
+-moz-box-shadow: 4px 13px 32px -16px rgba(230,230,230,1);
+box-shadow: 4px 13px 32px -16px rgba(230,230,230,1);
+}
+.mg{
+    margin: auto;
+}
+.contenedor {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

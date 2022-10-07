@@ -28,6 +28,7 @@ import { ProductoItem6Component } from './productos/producto-list/producto-item6
 import { ProductoItem7Component } from './productos/producto-list/producto-item7/producto-item7.component';
 import { RegistroComponent } from './registro/registro.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ProductoStartComponent } from './productos/producto-list/producto-start/producto-start.component';
 
 
 
@@ -57,6 +58,7 @@ import { AppRoutingModule } from './app-routing.module';
     ProductoItem6Component,
     ProductoItem7Component,
     RegistroComponent,
+    ProductoStartComponent,
 
    
   ],
