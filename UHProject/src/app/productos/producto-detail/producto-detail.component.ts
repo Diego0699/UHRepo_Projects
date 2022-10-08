@@ -24,9 +24,9 @@ export class ProductoDetailComponent implements OnInit {
     this.route.params.subscribe(
       (params:Params)=>{
         this.id = +params['id'];
-        this.id2 = +params['id2'];
+      
         this.producto = this.productService.getProduct(this.id);
-        this.producto2 = this.productService.getProduct2(this.id2);
+        
       }
     )
   }

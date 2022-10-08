@@ -6,9 +6,9 @@ export class ProductService{
 
      // Lista Placas Madre
     private products:Product[]=[
-        new Product('Intel Core I5',
-        750000,
-        'https://http2.mlstatic.com/D_NQ_NP_665166-MCR48871458342_012022-V.jpg'),
+        new Product('GIGABYTE B560M GAMING HD',
+        55000,
+        'https://extremetechcr.com/tienda/21417-large_default/gigabyte-b560m-gaming-hd.jpg'),
 
          new Product('Intel Core I9',
          250000,
@@ -157,8 +157,8 @@ export class ProductService{
         return this.products.slice();
         
     }
-    getProduct(index2:number){
-        return this.products[index2]
+    getProduct(index:number){
+        return this.products[index]
     }
 
 
@@ -177,8 +177,8 @@ export class ProductService{
         return this.products3.slice();
         
     }
-    getProduct3(index3:number){
-        return this.products3[index3]
+    getProduct3(index:number){
+        return this.products3[index]
     }
 
 
@@ -186,8 +186,8 @@ export class ProductService{
         return this.products4.slice();
         
     }
-    getProduct4(index4:number){
-        return this.products4[index4]
+    getProduct4(index:number){
+        return this.products4[index]
     }
 
 
@@ -196,8 +196,8 @@ export class ProductService{
         return this.products5.slice();
         
     }
-    getProduct5(index5:number){
-        return this.products5[index5]
+    getProduct5(index:number){
+        return this.products5[index]
     }
 
 
@@ -205,8 +205,8 @@ export class ProductService{
         return this.products6.slice();
         
     }
-    getProduct6(index6:number){
-        return this.products6[index6]
+    getProduct6(index:number){
+        return this.products6[index]
     }
 
     
@@ -214,8 +214,8 @@ export class ProductService{
         return this.products7.slice();
         
     }
-    getProduct7(index7:number){
-        return this.products7[index7]
+    getProduct7(index:number){
+        return this.products7[index]
     }
 
     
