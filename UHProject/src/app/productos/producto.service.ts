@@ -8,7 +8,7 @@ export class ProductService{
     private products:Product[]=[
         new Product('GIGABYTE B560M GAMING HD',
         55000,
-        'https://extremetechcr.com/tienda/21417-large_default/gigabyte-b560m-gaming-hd.jpg'),
+        'https://http2.mlstatic.com/D_NQ_NP_665166-MCR48871458342_012022-V.jpg'),
 
          new Product('Intel Core I9',
          250000,
