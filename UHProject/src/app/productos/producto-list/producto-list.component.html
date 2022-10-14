@@ -4,7 +4,7 @@
     <hr>
     <div class="col-xs-12" >
         <div class="dropdown row" 
-        appDropdown>
+            appDropdown>
             <button class="btn btn-secondary dropdown-toggle btnh" 
             type="button" 
             id="dropdownMenuButton" 
@@ -19,7 +19,7 @@
                             <div class="col-xs-12">
                                 <div class="row">
                                     <app-producto-item
-                                    *ngFor="let productEl of products;let i = index"
+                                    *ngFor="let productEl of Placas;let i = index"
                                     [product]="productEl"
                                     [index]="i">
                                     </app-producto-item>
@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="dropdown row" 
-        appDropdown>
+            appDropdown>
             <button class="btn btn-secondary dropdown-toggle btnh" 
             type="button" 
             id="dropdownMenuButton" 
@@ -46,7 +46,7 @@
                             <div class="col-xs-12">
                                 <div class="row">
                                     <app-producto-item2
-                                    *ngFor="let productEl2 of products2;let i2 = index"
+                                    *ngFor="let productEl2 of Procesadores;let i2 = index"
                                     [product2]="productEl2"
                                     [index]="i2">
                                     </app-producto-item2>
@@ -58,7 +58,7 @@
             </div>
         </div>
         <div class="dropdown row" 
-        appDropdown>
+            appDropdown>
             <button class="btn btn-secondary dropdown-toggle btnh" 
             type="button" 
             id="dropdownMenuButton" 
@@ -73,7 +73,7 @@
                             <div class="col-xs-12">
                                 <div class="row">
                                     <app-producto-item3
-                                    *ngFor="let productEl3 of products3;let i3 = index"
+                                    *ngFor="let productEl3 of Ram;let i3 = index"
                                     [product3]="productEl3"
                                     [index]="i3">
                                     </app-producto-item3>
@@ -85,7 +85,7 @@
             </div>
         </div>
         <div class="dropdown row" 
-        appDropdown>
+            appDropdown>
             <button class="btn btn-secondary dropdown-toggle btnh" 
             type="button" 
             id="dropdownMenuButton" 
@@ -100,7 +100,7 @@
                             <div class="col-xs-12">
                                 <div class="row">
                                     <app-producto-item4
-                                    *ngFor="let productEl4 of products4;let i = index"
+                                    *ngFor="let productEl4 of Almacenamiento;let i = index"
                                     [product4]="productEl4"
                                     [index4]="i">
                                     </app-producto-item4>
@@ -112,7 +112,7 @@
             </div>
         </div> 
         <div class="dropdown row" 
-        appDropdown>
+            appDropdown>
             <button class="btn btn-secondary dropdown-toggle btnh" 
             type="button" 
             id="dropdownMenuButton" 
@@ -127,7 +127,7 @@
                             <div class="col-xs-12">
                                 <div class="row">
                                     <app-producto-item5
-                                    *ngFor="let productEl5 of products5;let i5 = index"
+                                    *ngFor="let productEl5 of Enfriamiento;let i5 = index"
                                     [product5]="productEl5"
                                     [index]="i5">
                                     </app-producto-item5>
@@ -139,7 +139,7 @@
             </div>
         </div>
         <div class="dropdown row" 
-        appDropdown>
+            appDropdown>
             <button class="btn btn-secondary dropdown-toggle btnh" 
             type="button" 
             id="dropdownMenuButton" 
@@ -154,7 +154,7 @@
                             <div class="col-xs-12">
                                 <div class="row">
                                     <app-producto-item6
-                                    *ngFor="let productEl6 of products6;let i6 = index"
+                                    *ngFor="let productEl6 of Fuentes;let i6 = index"
                                     [product6]="productEl6"
                                     [index]="i6">
                                     </app-producto-item6>
@@ -166,7 +166,7 @@
             </div>
         </div>
         <div class="dropdown row" 
-        appDropdown>
+            appDropdown>
             <button class="btn btn-secondary dropdown-toggle btnh" 
             type="button" 
             id="dropdownMenuButton" 
@@ -181,7 +181,7 @@
                             <div class="col-xs-12">
                                 <div class="row">
                                     <app-producto-item7
-                                    *ngFor="let productEl7 of products7;let i7 = index"
+                                    *ngFor="let productEl7 of Graficas;let i7 = index"
                                     [product7]="productEl7"
                                     [index]="i7">
                                     </app-producto-item7>
@@ -195,110 +195,4 @@
     </div>
 </div>
 
-    <!-- <li class="dropdown">
-        <a class="dropdown-toggle" role="button">Placas Madres <span class="scaret"></span></a>
-        <ul class="dropdown-menu">
-            <div>
-                <a class="dropdown-item"> 
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-4">
-                                <div class="row">
-                                    <h3 class="bgh3">Placas Madre</h3>
-                                    <hr>
-                                    <app-producto-item
-                                    *ngFor="let productEl of products"
-                                    [product]="productEl">
-                                    </app-producto-item>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                
-            </div>
-        </ul>
-    </li> -->
-
-<!-- <div class="container">
-    <div class="row">
-        <div class="col-xs-4">
-            <div class="row">
-                <h3 class="bgh3">Placas Madre</h3>
-                <hr>
-                <app-producto-item
-                *ngFor="let productEl of products"
-                [product]="productEl">
-                </app-producto-item>
-            </div>
-        </div>
-        <div class="col-xs-4">
-            <div class="row">
-                <h3 class="bgh3">Procesadores</h3>
-                <hr>
-                <app-producto-item2
-                *ngFor="let productEl2 of products2"
-                [product2]="productEl2">
-                </app-producto-item2>
-            </div>
-        </div>
-        <div class="col-xs-4">
-            <div class="row">
-                <h3 class="bgh3">Memorias Ram</h3>
-                <hr>
-                <app-producto-item3
-                *ngFor="let productEl3 of products3"
-                [product3]="productEl3">
-                </app-producto-item3>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-4">
-            <div class="row">
-                <h3 class="bgh3">Almacenamiento</h3>
-                <hr>
-                <app-producto-item4
-                *ngFor="let productEl4 of products4"
-                [product4]="productEl4">
-                </app-producto-item4>
-            </div>
-        </div>
-        <div class="col-xs-4">
-            <div class="row">
-                <h3 class="bgh3">Enfriamiento</h3>
-                <hr>
-                <app-producto-item5
-                *ngFor="let productEl5 of products5"
-                [product5]="productEl5">
-                </app-producto-item5>
-            </div>
-        </div>
-        <div class="col-xs-4">
-            <div class="row">
-                <h3 class="bgh3">Fuentes de Poder</h3>
-                <hr>
-                <app-producto-item6
-                *ngFor="let productEl6 of products6"
-                [product6]="productEl6">
-                </app-producto-item6>
-            </div>
-        </div>
-    </div> 
-    <div class="row">
-        <div class="col-xs-4">
-            <div class="row">
-                <h3 class="bgh3">Tarjetas Graficas</h3>
-                <hr>
-                <app-producto-item7
-                *ngFor="let productEl7 of products7"
-                [product7]="productEl7">
-                </app-producto-item7>
-            </div>
-        </div>
-        <div class="row">
-            
-        </div>
-        
-    </div>
-</div> -->
+   

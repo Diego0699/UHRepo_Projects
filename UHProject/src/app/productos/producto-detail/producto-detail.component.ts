@@ -12,7 +12,7 @@ export class ProductoDetailComponent implements OnInit {
   producto:Product;
   producto2:Product;
   id:number;
-  id2:number;
+
  
   
 
@@ -24,7 +24,7 @@ export class ProductoDetailComponent implements OnInit {
     this.route.params.subscribe(
       (params:Params)=>{
         this.id = +params['id'];
-      
+        
         this.producto = this.productService.getProduct(this.id);
         
       }
