@@ -19,13 +19,13 @@ export class ProductoDetailComponent implements OnInit {
   constructor(private productService:ProductService,
               private route: ActivatedRoute,
               private router:Router) { }
-
+    //Aca corregir bug de productos
   ngOnInit(): void {//Se muestra el producto  con sus respectivos datos
     this.route.params.subscribe(
       (params:Params)=>{
         this.id = +params['id'];
         
-        this.producto = this.productService.getProduct(this.id);
+        this.producto = this.productService.getProduct3(this.id);
         
       }
     )
