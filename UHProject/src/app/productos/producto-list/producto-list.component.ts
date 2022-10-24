@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Product } from '../producto.model';
 import { ProductService } from '../producto.service';
@@ -9,6 +9,7 @@ import { ProductService } from '../producto.service';
   styleUrls: ['./producto-list.component.css']
 })
 export class ProductoListComponent implements OnInit {
+
   
 
 
@@ -32,6 +33,6 @@ export class ProductoListComponent implements OnInit {
     this.Fuentes = this.productService.getProducts6();
     this.Graficas = this.productService.getProducts7();
   }
-  
+ 
 
 }

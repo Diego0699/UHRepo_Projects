@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Product } from '../producto.model';
 import { ProductService } from '../producto.service';
@@ -10,8 +10,11 @@ import { ProductService } from '../producto.service';
 })
 export class ProductoDetailComponent implements OnInit {
   producto:Product;
-  producto2:Product;
   id:number;
+  ListSelected=''
+  @Input()product:Product;
+  @Input()product2:Product;
+  @Input()index:number;
 
  
   
@@ -21,11 +24,14 @@ export class ProductoDetailComponent implements OnInit {
               private router:Router) { }
     //Aca corregir bug de productos
   ngOnInit(): void {//Se muestra el producto  con sus respectivos datos
+   
+    
     this.route.params.subscribe(
-      (params:Params)=>{
+      (params:Params)=>{ 
         this.id = +params['id'];
-        
-        this.producto = this.productService.getProduct3(this.id);
+        this.producto = this.productService.getProduct(this.id) || this.productService.getProduct2(this.id) || this.productService.getProduct3(this.id)
+        || this.productService.getProduct4(this.id) || this.productService.getProduct5(this.id) || this.productService.getProduct6(this.id)
+        || this.productService.getProduct7(this.id);
         
       }
     )

@@ -16,7 +16,8 @@ const appRoutes:Routes=[
     {path: 'acerca',component:AcercaComponent},
     {path: 'productos',component:ProductosComponent, children:[
         {path: '',component:ProductoStartComponent},
-        {path: ':id',component:ProductoDetailComponent}
+        // {path: ':id',component:ProductoDetailComponent}
+        {path: ':category/:id',component:ProductoDetailComponent}
 
     ]},
     {path: 'carrito',component:CarritoComponent},
