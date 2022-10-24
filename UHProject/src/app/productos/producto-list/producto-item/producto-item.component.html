@@ -1,7 +1,7 @@
 <a 
 class="list-group-item clearfix"
 style="cursor: pointer;"
-[routerLink]="[index]"
+[routerLink]="['Placas Madres',product.id]"
 routerLinkActive="active">
     <div class="pull-left">
         <h4 class="list-group-item-heading"> {{product.name}}</h4>
@@ -17,5 +17,5 @@ routerLinkActive="active">
         style="max-height: 50px;">
     </span>
 </a>
-
+<!-- NOTA: Al personalizar el router link elimino bug de seleccion en todas las listas -->
 

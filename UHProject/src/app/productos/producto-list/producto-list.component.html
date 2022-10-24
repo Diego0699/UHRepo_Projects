@@ -1,15 +1,20 @@
 
 
+
 <div class="row" style="margin: auto;">
     <hr>
     <div class="col-xs-12" >
+
+        <!-- Inicia Placas -->
         <div class="dropdown row" 
-            appDropdown>
+            appDropdown
+            >
             <button class="btn btn-secondary dropdown-toggle btnh" 
             type="button" 
-            id="dropdownMenuButton" 
+            id="dropdownMenuButton1" 
             data-toggle="dropdown" aria-haspopup="true" 
-            aria-expanded="false">
+            aria-expanded="false"
+            >
                 Placas Madres
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -30,11 +35,12 @@
                 </a>
             </div>
         </div>
+        <!-- Inicia Procesadores -->
         <div class="dropdown row" 
             appDropdown>
             <button class="btn btn-secondary dropdown-toggle btnh" 
             type="button" 
-            id="dropdownMenuButton" 
+            id="dropdownMenuButton2" 
             data-toggle="dropdown" aria-haspopup="true" 
             aria-expanded="false">
                 Procesadores
@@ -57,11 +63,13 @@
                 </a>
             </div>
         </div>
+
+        <!-- Inicia RAM -->
         <div class="dropdown row" 
             appDropdown>
             <button class="btn btn-secondary dropdown-toggle btnh" 
             type="button" 
-            id="dropdownMenuButton" 
+            id="dropdownMenuButton3" 
             data-toggle="dropdown" aria-haspopup="true" 
             aria-expanded="false">
                 Memorias Ram
@@ -84,11 +92,12 @@
                 </a>
             </div>
         </div>
+        <!-- Inicia Almacenamiento -->
         <div class="dropdown row" 
             appDropdown>
             <button class="btn btn-secondary dropdown-toggle btnh" 
             type="button" 
-            id="dropdownMenuButton" 
+            id="dropdownMenuButton4" 
             data-toggle="dropdown" aria-haspopup="true" 
             aria-expanded="false">
                 Almacenamiento
@@ -100,9 +109,9 @@
                             <div class="col-xs-12">
                                 <div class="row">
                                     <app-producto-item4
-                                    *ngFor="let productEl4 of Almacenamiento;let i = index"
+                                    *ngFor="let productEl4 of Almacenamiento;let i4 = index"
                                     [product4]="productEl4"
-                                    [index4]="i">
+                                    [index]="i4">
                                     </app-producto-item4>
                                 </div>
                             </div>
@@ -111,11 +120,12 @@
                 </a>
             </div>
         </div> 
+        <!-- Inicia Enfriamiento -->
         <div class="dropdown row" 
             appDropdown>
             <button class="btn btn-secondary dropdown-toggle btnh" 
             type="button" 
-            id="dropdownMenuButton" 
+            id="dropdownMenuButton5" 
             data-toggle="dropdown" aria-haspopup="true" 
             aria-expanded="false">
                 Enfriamiento
@@ -138,11 +148,12 @@
                 </a>
             </div>
         </div>
+        <!-- Inicia Fuentes de Poder -->
         <div class="dropdown row" 
             appDropdown>
             <button class="btn btn-secondary dropdown-toggle btnh" 
             type="button" 
-            id="dropdownMenuButton" 
+            id="dropdownMenuButton6" 
             data-toggle="dropdown" aria-haspopup="true" 
             aria-expanded="false">
                 Fuentes de Poder
@@ -165,11 +176,12 @@
                 </a>
             </div>
         </div>
+        <!-- Inicia Graficas -->
         <div class="dropdown row" 
             appDropdown>
             <button class="btn btn-secondary dropdown-toggle btnh" 
             type="button" 
-            id="dropdownMenuButton" 
+            id="dropdownMenuButton7" 
             data-toggle="dropdown" aria-haspopup="true" 
             aria-expanded="false">
                 Tarjetas Graficas
