@@ -29,6 +29,10 @@ import { ProductoItem7Component } from './productos/producto-list/producto-item7
 import { RegistroComponent } from './registro/registro.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ProductoStartComponent } from './productos/producto-list/producto-start/producto-start.component';
+import { ShortenPipe } from './productos/shorten.pipe';
+import { CarritoCompraService } from './carrito/carrito.service';
+import { CarritoListComponent } from './carrito/carrito-list/carrito-list.component';
+import { CarritoItemsComponent } from './carrito/carrito-list/carrito-items/carrito-items.component';
 
 
 
@@ -59,6 +63,10 @@ import { ProductoStartComponent } from './productos/producto-list/producto-start
     ProductoItem7Component,
     RegistroComponent,
     ProductoStartComponent,
+    ShortenPipe,
+    CarritoListComponent,
+    CarritoItemsComponent,
+   
 
    
   ],

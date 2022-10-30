@@ -1,7 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { Product } from '../producto.model';
-import { ProductService } from '../producto.service';
+import { CarritoProducto } from 'src/app/shared/carrito.model';
+import { CarritoCompraService } from 'src/app/carrito/carrito.service';
+import { Product } from '../../shared/producto.model';
+import { ProductoService } from '../producto.service';
+import { ArrayType } from '@angular/compiler';
 
 @Component({
   selector: 'app-producto-detail',
@@ -9,32 +12,29 @@ import { ProductService } from '../producto.service';
   styleUrls: ['./producto-detail.component.css']
 })
 export class ProductoDetailComponent implements OnInit {
+  
   producto:Product;
+  productosSeleccionados:Product[] =[];
   id:number;
-  ListSelected=''
-  @Input()product:Product;
-  @Input()product2:Product;
-  @Input()index:number;
-
- 
   
 
-  constructor(private productService:ProductService,
+  constructor(private productoService:ProductoService,
               private route: ActivatedRoute,
               private router:Router) { }
-    //Aca corregir bug de productos
-  ngOnInit(): void {//Se muestra el producto  con sus respectivos datos
-   
     
+  ngOnInit(): void {//Se muestra el producto  con sus respectivos datos
     this.route.params.subscribe(
       (params:Params)=>{ 
         this.id = +params['id'];
-        this.producto = this.productService.getProduct(this.id) || this.productService.getProduct2(this.id) || this.productService.getProduct3(this.id)
-        || this.productService.getProduct4(this.id) || this.productService.getProduct5(this.id) || this.productService.getProduct6(this.id)
-        || this.productService.getProduct7(this.id);
-        
+        this.producto = this.productoService.getProduct(this.id) || this.productoService.getProduct2(this.id) || this.productoService.getProduct3(this.id)
+        || this.productoService.getProduct4(this.id) || this.productoService.getProduct5(this.id) || this.productoService.getProduct6(this.id)
+        || this.productoService.getProduct7(this.id);
       }
     )
+  }
+  onaddToCarrito(){
+    this.productosSeleccionados.push(this.producto)
+    console.log(this.productosSeleccionados)
   }
 
 }

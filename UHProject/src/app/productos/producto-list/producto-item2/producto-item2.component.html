@@ -4,7 +4,7 @@ style="cursor: pointer;"
 [routerLink]="['Procesadores',product2.id]"
 routerLinkActive="active">
     <div class="pull-left">
-        <h4 class="list-group-item-heading"> {{product2.name}}</h4>
+        <h4 class="list-group-item-heading"> {{product2.name | shorten}}</h4>
         <p class="list-group-item-text">{{product2.price}}</p>
         <span>Click para más información</span>
         <!-- <button class="btn btn-danger btn-sm">Añadir al Carrito</button> -->

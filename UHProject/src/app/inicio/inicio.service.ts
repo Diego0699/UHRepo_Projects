@@ -7,24 +7,24 @@ export class ProductInicioService{
 
      // Lista Productos Ofertas
     private products:ProductInicio[]=[
-        new ProductInicio('Intel Core I5',
-        '¢ 250,000',
-        'https://http2.mlstatic.com/D_NQ_NP_665166-MCR48871458342_012022-V.jpg'),
-
-         new ProductInicio('Intel Core I9',
-         '¢ 420,000',
-         'https://www.intel.la/content/dam/www/central-libraries/us/en/images/alder-lake-i9-no12-original.png.rendition.intel.web.864.486.png')
+        new ProductInicio(0,'GIGABYTE H610M H DDR4',
+        75000,
+        'https://extremetechcr.com/tienda/19093-large_default/gigabyte-h610m-h-ddr4.jpg'),
+        new ProductInicio(1,'EVGA CLC 120',
+        30000,
+        'https://extremetechcr.com/tienda/14775-large_default/evga-clc-120.jpg'),
     ];
 
     // Lista Productos Nuevos
     private products2:ProductInicio[]=[
-        new ProductInicio('Ryzen 5',
-        '¢ 250,000',
-        'https://igamingcr.com/wp-content/uploads/2022/02/100-100000252BOX.jpg'),
+        new ProductInicio(25,'SEASONIC FOCUS GM-850 - 80 PLUS GOLD',
+        92000,
+        'https://extremetechcr.com/tienda/14467-large_default/seasonic-focus-gm-850-80-plus-gold.jpg'),
 
-         new ProductInicio('Asus MotherBoard',
-         '¢ 420,000',
-         'https://www.asus.com/media/Odin/websites/global/ProductLine/20200819054034.png')
+         new ProductInicio(3,'ADATA LEGEND 750 500GB',
+         30000,
+         'https://extremetechcr.com/tienda/18541-home_default/adata-legend-750-500gb.jpg'),
+        
     ];
     constructor(){}
     getProducts(){
