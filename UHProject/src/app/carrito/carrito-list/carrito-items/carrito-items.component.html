@@ -1,0 +1,18 @@
+<div 
+class="list-group-item clearfix">
+    <!-- (click)="onSelected()"> -->
+    <div class="pull-left">
+        <h4 class="list-group-item-heading"> {{CarritoProductos.name}}</h4>
+        <p class="list-group-item-text">Precio: ¢<strong>{{CarritoProductos.price}}</strong></p>
+        <br>
+        <button class="btn btn-danger btn-sm">-</button>
+        <button class="btn btn-success btn-sm mgl">+</button>
+    </div>
+    <span class="pull-right">
+        <img 
+        [src]="CarritoProductos.imagePath"
+        alt="nombre producto"
+        class="img-responsive"
+        style="max-height: 100px;">
+    </span>
+</div>

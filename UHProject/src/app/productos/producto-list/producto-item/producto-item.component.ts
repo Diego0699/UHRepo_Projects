@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Product } from '../../producto.model';
-import { ProductService } from '../../producto.service';
+import { Product } from '../../../shared/producto.model';
+import { ProductoService } from '../../producto.service';
 
 @Component({
   selector: 'app-producto-item',
@@ -10,18 +10,15 @@ import { ProductService } from '../../producto.service';
 })
 export class ProductoItemComponent implements OnInit {
   @Input()product:Product;
-  @Input()index:number;
 
 
-  constructor(private productService:ProductService,
+  constructor(private productoService:ProductoService,
               private route:ActivatedRoute,
              ) { }
 
   ngOnInit(): void { 
   }
    onSelected(){
-     this.productService.productSelected.emit(this.product)
-     
-    
+     this.productoService.productSelected.emit(this.product)
    }
 }

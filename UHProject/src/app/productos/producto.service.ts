@@ -1,7 +1,12 @@
-import { EventEmitter } from "@angular/core";
-import { Product } from "./producto.model";
+import { EventEmitter, Injectable } from "@angular/core";
+import { CarritoProducto } from "../shared/carrito.model";
+import { CarritoCompraService } from "../carrito/carrito.service";
+import { Product } from "../shared/producto.model";
 
-export class ProductService{
+@Injectable({
+    providedIn: 'root'
+})
+export class ProductoService{
      productSelected = new EventEmitter<Product>();
     
 
@@ -169,8 +174,8 @@ export class ProductService{
         'https://extremetechcr.com/tienda/22116-large_default/msi-geforce-rtx-4090-gaming-trio-24g.jpg')
     
     ];
-    constructor(){}
-    
+    constructor(private carritoService:CarritoCompraService){}
+   
     getProducts(){
         return this.Placas.slice();
         
@@ -278,5 +283,8 @@ export class ProductService{
         // return this.Graficas[index]
     }
 
+    addProductoToCarrito(productosCarrito:Product[]){
+
+    }
     
 }
