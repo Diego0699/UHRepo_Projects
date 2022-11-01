@@ -1,6 +1,6 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { Product } from '../../shared/producto.model';
+import { Product } from '../producto.model';
 import { ProductoService } from '../producto.service';
 
 @Component({

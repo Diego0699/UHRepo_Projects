@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { ProductoDetailComponent } from './producto-detail/producto-detail.component';
 import { ProductoService } from './producto.service';
 
 @Component({
@@ -9,10 +10,15 @@ import { ProductoService } from './producto.service';
 })
 export class ProductosComponent implements OnInit {
 
+ 
+
+  detailActivo:boolean;
 
   constructor() { }
 
   ngOnInit(): void {
+
+    
   }
 
 }

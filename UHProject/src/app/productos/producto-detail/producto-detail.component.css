@@ -14,3 +14,14 @@ box-shadow: 4px 13px 32px -16px rgba(230,230,230,1);
     justify-content: center;
     align-items: center;
   }
+
+
+.TAC{
+    
+    background-color: green; 
+    color:white; 
+    border-radius:10px; 
+    padding:5px;
+    text-align: center;
+}
+

@@ -1,7 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 
-import { Product } from 'src/app/shared/producto.model';
+import { Product } from 'src/app/productos/producto.model';
 import { CarritoCompraService } from '../carrito.service';
+import { CarritoItemsComponent } from './carrito-items/carrito-items.component';
 
 @Component({
   selector: 'app-carrito-list',
@@ -13,8 +14,13 @@ export class CarritoListComponent implements OnInit {
   CarritoProductos:Product[];
   constructor(private carritoService:CarritoCompraService) { }
 
+  @ViewChild(CarritoItemsComponent) child;
+  Cantidad:boolean;
   ngOnInit(): void {
     this.CarritoProductos = this.carritoService.getCarritoProductos();
+  }
+  Sumador(){
+    this.Cantidad = this.child.Cantidad;
   }
 
 }
