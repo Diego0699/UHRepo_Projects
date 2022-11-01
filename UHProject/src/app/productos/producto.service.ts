@@ -1,15 +1,14 @@
 import { EventEmitter, Injectable } from "@angular/core";
 import { CarritoProducto } from "../shared/carrito.model";
 import { CarritoCompraService } from "../carrito/carrito.service";
-import { Product } from "../shared/producto.model";
+import { Product } from "./producto.model";
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 export class ProductoService{
      productSelected = new EventEmitter<Product>();
-    
-
+     productosSeleccionados:Product[] =[];
+     detailActivo:boolean =false;
+     
      // Lista Placas Madre
     private Placas:Product[]=[
         new Product(0,'GIGABYTE H610M H DDR4',
@@ -282,9 +281,12 @@ export class ProductoService{
         return product;
         // return this.Graficas[index]
     }
-
-    addProductoToCarrito(productosCarrito:Product[]){
-
+    //removi el [] para prueba
+    addProductoToCarrito(productos:Product[]){
+        // this.carritoService.addProductos(this.productoSeleccionados);
+        this.carritoService.addProductos(productos);
+     
+        
     }
     
 }

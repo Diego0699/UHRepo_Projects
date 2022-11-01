@@ -6,7 +6,7 @@ class="list-group-item clearfix">
         <p class="list-group-item-text">Precio: ¢<strong>{{CarritoProductos.price}}</strong></p>
         <br>
         <button class="btn btn-danger btn-sm">-</button>
-        <button class="btn btn-success btn-sm mgl">+</button>
+        <button class="btn btn-success btn-sm mgl" (click)="onSumador()">+</button>
     </div>
     <span class="pull-right">
         <img 
@@ -16,3 +16,5 @@ class="list-group-item clearfix">
         style="max-height: 100px;">
     </span>
 </div>
+<div>{{Cantidad}}</div>
+

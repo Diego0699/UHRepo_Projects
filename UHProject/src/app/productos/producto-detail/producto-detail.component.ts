@@ -1,8 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { CarritoProducto } from 'src/app/shared/carrito.model';
 import { CarritoCompraService } from 'src/app/carrito/carrito.service';
-import { Product } from '../../shared/producto.model';
+import { Product } from '../producto.model';
 import { ProductoService } from '../producto.service';
 import { ArrayType } from '@angular/compiler';
 
@@ -16,7 +16,8 @@ export class ProductoDetailComponent implements OnInit {
   producto:Product;
   productosSeleccionados:Product[] =[];
   id:number;
-  
+ 
+  detailActivado:boolean =false;
 
   constructor(private productoService:ProductoService,
               private route: ActivatedRoute,
@@ -29,12 +30,26 @@ export class ProductoDetailComponent implements OnInit {
         this.producto = this.productoService.getProduct(this.id) || this.productoService.getProduct2(this.id) || this.productoService.getProduct3(this.id)
         || this.productoService.getProduct4(this.id) || this.productoService.getProduct5(this.id) || this.productoService.getProduct6(this.id)
         || this.productoService.getProduct7(this.id);
+
+
+        
       }
     )
+    
   }
   onaddToCarrito(){
-    this.productosSeleccionados.push(this.producto)
-    console.log(this.productosSeleccionados)
+    this.detailActivado = true;
+    setTimeout(() => {
+      this.detailActivado = false;
+      console.log(this.detailActivado);
+    }, 2000);
+    
+   
+
+    this.productosSeleccionados.push(this.producto);
+    this.productoService.addProductoToCarrito(this.productosSeleccionados);
+    console.log(this.productosSeleccionados);
+   
   }
 
 }
