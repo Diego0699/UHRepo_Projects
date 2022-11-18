@@ -7,7 +7,7 @@ import { Product } from "../productos/producto.model";
 })
 export class CarritoCompraService{
     productosCambio = new EventEmitter<Product[]>();
-    Cantidad:number;
+    TotalPrice:number;
     private ProductosCarrito:Product[] =[
         // new Product(0,'INTEL CORE I9 12900KF',
         // 480000,
@@ -29,5 +29,13 @@ export class CarritoCompraService{
       this.productosCambio.emit(this.ProductosCarrito.slice());
    }
 
+
+   sumaTotal(){
+    for (let x of this.ProductosCarrito){
+        
+    } 
+   }
+  
+   
   
 }

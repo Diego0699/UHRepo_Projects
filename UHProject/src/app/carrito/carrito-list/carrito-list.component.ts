@@ -11,16 +11,23 @@ import { CarritoItemsComponent } from './carrito-items/carrito-items.component';
 })
 export class CarritoListComponent implements OnInit {
   @Input()ProductoCarrito:Product;
+  
   CarritoProductos:Product[];
   constructor(private carritoService:CarritoCompraService) { }
-
   @ViewChild(CarritoItemsComponent) child;
-  Cantidad:boolean;
+ 
+
   ngOnInit(): void {
     this.CarritoProductos = this.carritoService.getCarritoProductos();
+    Total(2000)
   }
-  Sumador(){
-    this.Cantidad = this.child.Cantidad;
-  }
+
+  
+}
+
+// todo: Investigate about how to sum products prices and display on another component
+
+function Total(price: number){
+  console.log(`Total: ${price}`);
 
 }
