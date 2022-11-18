@@ -18,7 +18,7 @@ export class ProductoItemComponent implements OnInit {
 
   ngOnInit(): void { 
   }
-   onSelected(){
-     this.productoService.productSelected.emit(this.product)
-   }
+  //  onSelected(){
+  //   this.productoService.productSelected.emit(this.product)
+  //  }
 }

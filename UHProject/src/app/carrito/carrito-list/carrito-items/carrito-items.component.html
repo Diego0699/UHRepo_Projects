@@ -5,8 +5,7 @@ class="list-group-item clearfix">
         <h4 class="list-group-item-heading"> {{CarritoProductos.name}}</h4>
         <p class="list-group-item-text">Precio: ¢<strong>{{CarritoProductos.price}}</strong></p>
         <br>
-        <button class="btn btn-danger btn-sm">-</button>
-        <button class="btn btn-success btn-sm mgl" (click)="onSumador()">+</button>
+        
     </div>
     <span class="pull-right">
         <img 
@@ -16,5 +15,16 @@ class="list-group-item clearfix">
         style="max-height: 100px;">
     </span>
 </div>
-<div>{{Cantidad}}</div>
+<div class="list-group-item clearfix">
+    <div class="col-xs-4">
+        <p>Cantidad: {{CantidadArticulo}}</p>
+        <p>Sub Total: {{(CarritoProductos.price) * CantidadArticulo}}</p>
+    </div>
+    <span class="pull-right" style="margin-top: 20px">
+        <button class="btn btn-danger btn-sm" >-</button>
+        <button class="btn btn-success btn-sm mgl" (click)="onSumar()">+</button>
+    </span>
+        
+</div>
+<hr>
 

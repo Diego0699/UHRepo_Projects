@@ -10,11 +10,19 @@ import { CarritoCompraService } from './carrito.service';
 })
 export class CarritoComponent implements OnInit {
   productosCarrito:CarritoProducto[]
-  constructor(private carritoService:CarritoCompraService) { }
+  constructor(private carritoService:CarritoCompraService) { 
+   
+  
+
+  }
 
   ngOnInit(): void {
     let ProductosLimpio = Array.from(new Set(this.productosCarrito));
     this.productosCarrito = this.carritoService.getCarritoProductos();
+    
   }
 
 }
+
+
+

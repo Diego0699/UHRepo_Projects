@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CarritoProducto } from 'src/app/shared/carrito.model';
 import { CarritoCompraService } from '../../carrito.service';
 
@@ -10,18 +10,25 @@ import { CarritoCompraService } from '../../carrito.service';
 })
 export class CarritoItemsComponent implements OnInit {
   @Input()CarritoProductos:CarritoProducto;
+  @Output() emitePrecio = new EventEmitter<number>();
 
-  Cantidad:number = 1;
+  CantidadArticulo:number=1;
+  constructor(private carritoService:CarritoCompraService ) { 
   
-  constructor(private carritoService:CarritoCompraService ) { }
-
+  }
+   
   ngOnInit(): void {
  
   }
-  onSumador(){
-    this.carritoService
-    this.Cantidad ++;
-    console.log(this.Cantidad)
-   
+  onSumar(){
+    this.CantidadArticulo++;
   }
+  onRestar(){
+    if(this.CantidadArticulo > 1){
+      this.CantidadArticulo--;
+    }else{
+      this.CantidadArticulo = 1;
+    };    
+  }
+  
 }
