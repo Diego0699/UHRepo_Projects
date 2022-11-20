@@ -1,21 +1,37 @@
 <div 
 class="list-group-item clearfix">
-    <!-- (click)="onSelected()"> -->
-    <div class="pull-left">
-        <h4 class="list-group-item-heading"> {{CarritoProductos.name}}</h4>
-        <p class="list-group-item-text">Precio: ¢<strong>{{CarritoProductos.price}}</strong></p>
-        <br>
-        
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="pull-left">
+                <h4 class="list-group-item-heading"> {{CarritoProductos.name}}</h4>
+                <p class="list-group-item-text">Precio: ¢<strong>{{CarritoProductos.price}}</strong></p>
+                <br>
+            </div>
+            <span class="pull-right">
+                <img 
+                [src]="CarritoProductos.imagePath"
+                alt="nombre producto"
+                class="img-responsive"
+                style="max-height: 100px;">
+            </span>
+        </div>
     </div>
-    <span class="pull-right">
-        <img 
-        [src]="CarritoProductos.imagePath"
-        alt="nombre producto"
-        class="img-responsive"
-        style="max-height: 100px;">
-    </span>
+   
+        <div class="row">
+            <div class="col-xs-6 list-group-item clearfix" style="margin-left: 10px;">
+                <div class="col-xs-8">
+                    <p>Cantidad: {{CantidadArticulo}}</p>
+                <p>Sub Total: ¢{{(CarritoProductos.price) * CantidadArticulo}}</p>
+                </div>
+                <span class="pull-right" style="margin-top: 20px;">
+                    <button class="btn btn-danger btn-sm" >-</button>
+                    <button class="btn btn-success btn-sm mgl" (click)="onSumar()">+</button>
+                </span>
+            </div>
+        </div> 
+    
 </div>
-<div class="list-group-item clearfix">
+<!-- <div class="list-group-item clearfix">
     <div class="col-xs-4">
         <p>Cantidad: {{CantidadArticulo}}</p>
         <p>Sub Total: {{(CarritoProductos.price) * CantidadArticulo}}</p>
@@ -25,6 +41,6 @@ class="list-group-item clearfix">
         <button class="btn btn-success btn-sm mgl" (click)="onSumar()">+</button>
     </span>
         
-</div>
+</div> -->
 <hr>
 
