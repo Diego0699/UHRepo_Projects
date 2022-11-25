@@ -13,12 +13,13 @@ export class CarritoItemsComponent implements OnInit {
   @Output() emitePrecio = new EventEmitter<number>();
 
   CantidadArticulo:number=1;
+  public carritoProductosLista:CarritoProducto[];
   constructor(private carritoService:CarritoCompraService ) { 
-  
+  this.carritoProductosLista=[];
   }
    
   ngOnInit(): void {
- 
+    this.carritoProductosLista.push(this.CarritoProductos);
   }
   onSumar(){
     this.CantidadArticulo++;
@@ -30,5 +31,13 @@ export class CarritoItemsComponent implements OnInit {
       this.CantidadArticulo = 1;
     };    
   }
-  
+   onDelete(index:number){
+    if(index == this.CarritoProductos.id ){
+      console.log(index);
+      console.log(this.CarritoProductos.id);
+      console.log(this.CarritoProductos)
+      this.carritoProductosLista.splice(index,1)
+      this.carritoService.deleteCarritoProducto(index);
+    }
+   }
 }

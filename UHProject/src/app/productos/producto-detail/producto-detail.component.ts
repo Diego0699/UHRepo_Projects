@@ -41,7 +41,6 @@ export class ProductoDetailComponent implements OnInit {
     this.detailActivado = true;
     setTimeout(() => {
       this.detailActivado = false;
-      console.log(this.detailActivado);
     }, 2000);
     
    

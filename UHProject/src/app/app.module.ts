@@ -33,7 +33,7 @@ import { ShortenPipe } from './productos/shorten.pipe';
 import { CarritoCompraService } from './carrito/carrito.service';
 import { CarritoListComponent } from './carrito/carrito-list/carrito-list.component';
 import { CarritoItemsComponent } from './carrito/carrito-list/carrito-items/carrito-items.component';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -67,13 +67,15 @@ import { CarritoItemsComponent } from './carrito/carrito-list/carrito-items/carr
     CarritoListComponent,
     CarritoItemsComponent,
    
-
+    
    
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

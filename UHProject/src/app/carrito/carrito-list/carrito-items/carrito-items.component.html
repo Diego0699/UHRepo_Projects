@@ -24,23 +24,18 @@ class="list-group-item clearfix">
                 <p>Sub Total: ¢{{(CarritoProductos.price) * CantidadArticulo}}</p>
                 </div>
                 <span class="pull-right" style="margin-top: 20px;">
-                    <button class="btn btn-danger btn-sm" >-</button>
-                    <button class="btn btn-success btn-sm mgl" (click)="onSumar()">+</button>
+                    <button class="btn btn-danger btn-sm" (click)="onRestar()"><i>-</i></button>
+                    <button class="btn btn-success btn-sm mgl" (click)="onSumar()"><i>+</i></button>
                 </span>
             </div>
+            <div class="col-xs-1 col-md-offset-4">
+                <span >
+                    <button class="btn btn-danger btn-sm" style="margin-top: 50px;" (click)="onDelete(CarritoProductos.id)"><i>x</i></button>
+                 </span> 
+            </div>
         </div> 
+      
     
 </div>
-<!-- <div class="list-group-item clearfix">
-    <div class="col-xs-4">
-        <p>Cantidad: {{CantidadArticulo}}</p>
-        <p>Sub Total: {{(CarritoProductos.price) * CantidadArticulo}}</p>
-    </div>
-    <span class="pull-right" style="margin-top: 20px">
-        <button class="btn btn-danger btn-sm" >-</button>
-        <button class="btn btn-success btn-sm mgl" (click)="onSumar()">+</button>
-    </span>
-        
-</div> -->
 <hr>
 
