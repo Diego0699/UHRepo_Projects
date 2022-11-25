@@ -24,6 +24,7 @@ export class CarritoItemsComponent implements OnInit {
   onSumar(){
     this.CantidadArticulo++;
   }
+  //*cambio
   onRestar(){
     if(this.CantidadArticulo > 1){
       this.CantidadArticulo--;
