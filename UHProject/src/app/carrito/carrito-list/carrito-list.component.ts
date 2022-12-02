@@ -10,22 +10,28 @@ import { CarritoItemsComponent } from './carrito-items/carrito-items.component';
   templateUrl: './carrito-list.component.html',
   styleUrls: ['./carrito-list.component.css']
 })
+
+
 export class CarritoListComponent implements OnInit {
-  // @Input()ProductoCarrito:Product;
-  
+  @Input()ProductoCarrito:Product;
+  Subtotalf:number;
+  IVAf: number;
+  Totalf:number;
   CarritoProductos:Product[];
-  constructor(private carritoService:CarritoCompraService) { }
-  // @ViewChild(CarritoItemsComponent) child;
+  constructor(private carritoService:CarritoCompraService) { 
+   
+  }
+  @ViewChild(CarritoItemsComponent) child;
  
 
   ngOnInit(): void {
     this.CarritoProductos = this.carritoService.getCarritoProductos();
-   
-  }
-
+    this.Subtotalf=0;
+    this.IVAf=0;
+    this.Totalf=0;
   
+  }
+  datosDetalle(lista:[]){
+    console.log(lista);
+  }
 }
-
-
-
-
