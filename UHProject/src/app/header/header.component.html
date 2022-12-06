@@ -6,22 +6,9 @@
     <ul class="nav navbar-nav" >
         <li><img src="./assets/logoproyecto.png" style="max-height: 50px;" alt="Logo"></li>
         <li  routerLinkActive="active2" [routerLinkActiveOptions]="{exact:true}"><a  class="wtext" routerLink="/">Inicio</a></li>
-        <li  routerLinkActive="active2"><a  class="wtext" routerLink="acerca">Acerca</a></li>
-        <li  routerLinkActive="active2"><a  class="wtext" routerLink="productos">Productos</a></li>
-        <!-- <li  routerLinkActive="active2" class="dropdown"
-        appDropdown>
-            <a routerLink="productos"  class="dropdown-toggle wtext"  data-toggle="dropdown">Productos<b ></b></a>
-            <ul class="dropdown-menu">
-                <li><a href="#">Placas Madres</a></li>
-                <li><a href="#">Procesadores</a></li>
-                <li><a href="#">Memorias Ram</a></li>
-                <li><a href="#">Almacenamiento</a></li>
-                <li><a href="#">Enfriamiento</a></li>
-                <li><a href="#">Fuentes de Poder</a></li>
-                <li><a href="#">Tarjetas Graficas</a></li>
-            </ul>
-        </li> -->
-        <li routerLinkActive="active2"><a  class="wtext" routerLink="carrito">Carrito</a></li>
+        <li  routerLinkActive="active2"><a  class="wtext" routerLink="/acerca">Acerca</a></li>
+        <li  routerLinkActive="active2"><a  class="wtext" routerLink="/productos">Productos</a></li>
+        <li routerLinkActive="active2"><a  class="wtext" routerLink="/carrito" *ngIf="isAuthenticated">Carrito</a></li>
     </ul>
     <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
@@ -31,7 +18,8 @@
         <button type="button" class="btn btn-primary" style="margin-left: 5px;">Buscar</button>
     </form>
     <ul class="nav navbar-nav navbar-right ">
-        <li routerLinkActive="active2"><a  class="wtext" routerLink="sesion">Iniciar Sesión </a></li>
+        <li routerLinkActive="active2"><a  class="wtext" routerLink="sesion" *ngIf="!isAuthenticated">Iniciar Sesión </a></li>
+        <li routerLinkActive="active2"><a  class="wtext" (click)="onCerrarSesion()" *ngIf="isAuthenticated">Cerrar Sesión </a></li>
     </ul>
     
 </nav>

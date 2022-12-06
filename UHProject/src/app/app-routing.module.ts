@@ -6,7 +6,7 @@ import { InicioComponent } from "./inicio/inicio.component";
 import { ProductoDetailComponent } from "./productos/producto-detail/producto-detail.component";
 import { ProductoStartComponent } from "./productos/producto-list/producto-start/producto-start.component";
 import { ProductosComponent } from "./productos/productos.component";
-import { RegistroComponent } from "./registro/registro.component";
+
 
 
 import { SesionComponent } from "./sesion/sesion.component";
@@ -22,7 +22,6 @@ const appRoutes:Routes=[
     ]},
     {path: 'carrito',component:CarritoComponent},
     {path: 'sesion',component:SesionComponent},
-    {path: 'registro',component:RegistroComponent},
   
     
     

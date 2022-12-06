@@ -1,10 +1,12 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AuthService } from './../../sesion/auth.service';
+import { Component, EventEmitter, Input , OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { CarritoProducto } from 'src/app/shared/carrito.model';
 import { CarritoCompraService } from 'src/app/carrito/carrito.service';
 import { Product } from '../producto.model';
 import { ProductoService } from '../producto.service';
 import { ArrayType } from '@angular/compiler';
+
 
 @Component({
   selector: 'app-producto-detail',
@@ -16,12 +18,11 @@ export class ProductoDetailComponent implements OnInit {
   producto:Product;
   productosSeleccionados:Product[] =[];
   id:number;
- 
+
   detailActivado:boolean =false;
 
   constructor(private productoService:ProductoService,
-              private route: ActivatedRoute,
-              private router:Router) { }
+              private route: ActivatedRoute) { }
     
   ngOnInit(): void {//Se muestra el producto  con sus respectivos datos
     this.route.params.subscribe(
@@ -30,12 +31,10 @@ export class ProductoDetailComponent implements OnInit {
         this.producto = this.productoService.getProduct(this.id) || this.productoService.getProduct2(this.id) || this.productoService.getProduct3(this.id)
         || this.productoService.getProduct4(this.id) || this.productoService.getProduct5(this.id) || this.productoService.getProduct6(this.id)
         || this.productoService.getProduct7(this.id);
-
-
-        
       }
     )
     
+  
   }
   onaddToCarrito(){
     this.detailActivado = true;
