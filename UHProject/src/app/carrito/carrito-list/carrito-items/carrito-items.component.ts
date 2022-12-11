@@ -15,6 +15,8 @@ export class CarritoItemsComponent implements OnInit {
   Subtotalf:number;
   IVAf: number;
   Totalf:number;
+
+  sumaTotal:number;
   detalle=[];
 
   @Output() listaDetalle = new EventEmitter<any>();
@@ -23,19 +25,19 @@ export class CarritoItemsComponent implements OnInit {
   constructor(private carritoService:CarritoCompraService ) { 
   this.carritoProductosLista=[];
 
-
+  this.sumaTotal=0;
   this.IVAf=0;
   this.Totalf=0;
   this.detalle=[this.Subtotalf,this.IVAf,this.Totalf];
   }
-   
+    
   ngOnInit(): void {
     this.carritoProductosLista.push(this.CarritoProductos);
-    for (let p of this.carritoProductosLista) {
-      this.Subtotalf=this.CarritoProductos.price*this.CantidadArticulo;
-      this.IVAf= this.Subtotalf * 0.13;
-      this.Totalf = this.IVAf + this.Subtotalf;
-    }
+    this.Subtotalf=this.CarritoProductos.price*this.CantidadArticulo;
+    this.IVAf= this.Subtotalf * 0.13;
+    this.Totalf = this.IVAf + this.Subtotalf;
+    // sumarTotales()
+    
   }
 
   // datosDetalle(){
@@ -74,4 +76,10 @@ export class CarritoItemsComponent implements OnInit {
       this.carritoService.getCarritoProductos();
     }
    }
+}
+
+function sumarTotales(){
+  for (let p of this.carritoProductosLista) {
+    this.sumaTotal+=this.carritoProductosLista[2]
+  }
 }

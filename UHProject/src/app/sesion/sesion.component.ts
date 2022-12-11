@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { AuthResponseData, AuthService } from './auth.service';
 
 @Component({
   selector: 'app-sesion',
@@ -7,14 +10,50 @@ import { Router } from '@angular/router';
   styleUrls: ['./sesion.component.css']
 })
 export class SesionComponent implements OnInit {
- 
+  isLoginMode = true;
+  isLoading = false;
+  error:string = null;
 
-  constructor(private router:Router) { }
+  constructor(private authService:AuthService,
+              private router:Router) { }
 
   ngOnInit(): void {
   }
-  onRegister(){
-    this.router.navigate(['registro']);
-  }
+  
  
+ 
+  onSwitchMode(){
+    this.isLoginMode = !this.isLoginMode;
+  }
+  onSubmit(form:NgForm){
+    if(!form.valid){
+      return;
+    }
+    const email = form.value.email;
+    const password = form.value.password;
+    let authObs: Observable<AuthResponseData>;
+
+    this.isLoading = true;
+    if(this.isLoginMode){
+      authObs = this.authService.iniciarSesion(email,password);
+    }else{
+      authObs = this.authService.registrar(email,password)
+    }
+
+  
+    authObs.subscribe(
+      resData =>{
+        console.log(resData);
+        this.isLoading = false;
+        this.router.navigate(['./inicio']);
+      },
+      errorMessage =>{
+        console.log(errorMessage);
+        this.error = errorMessage;
+        this.isLoading = false;
+      }
+    )
+
+    form.reset();
+  }
 }
