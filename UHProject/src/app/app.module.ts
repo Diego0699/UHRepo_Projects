@@ -34,6 +34,7 @@ import { CarritoCompraService } from './carrito/carrito.service';
 import { CarritoListComponent } from './carrito/carrito-list/carrito-list.component';
 import { CarritoItemsComponent } from './carrito/carrito-list/carrito-items/carrito-items.component';
 import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -75,7 +76,6 @@ import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinne
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-  
 
   ],
   providers: [],

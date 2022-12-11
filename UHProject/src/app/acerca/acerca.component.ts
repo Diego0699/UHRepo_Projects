@@ -29,12 +29,12 @@ export class AcercaComponent implements OnInit {
     this.postForm.reset();
   
   }
-  resetForm(postForm: NgForm) {
-    // postForm.reset()
-   postForm.setValue({
-    asunto:'-- Seleccione --',
-    comentario:'hola'
-   })
+  // resetForm(postForm: NgForm) {
+  //   // postForm.reset()
+  //  postForm.setValue({
+  //   asunto:'-- Seleccione --',
+  //   comentario:'hola'
+  //  })
 
-  }
+  // }
 }
