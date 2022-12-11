@@ -1,21 +1,42 @@
 <div class="col xs-12 col-md-9 col-md-offset-1">
-  <form class="form-group form-inline shadow" >
-    <h2 class="h2" style="text-align: center;"> Inicio de Sesión</h2>
+  <div class="alert alert-danger" *ngIf="error">
+    <p>{{ error }}</p>
+  </div>
+  <div *ngIf="isLoading" style="text-align:center">
+    <app-loading-spinner></app-loading-spinner>
+  </div>
+  <form class="form-group form-inline shadow" #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
+    <h2 class="h2" style="text-align: center;" > {{isLoginMode ? 'Iniciar Sesion' : 'Registrar'}} </h2>
     <p style="text-align: center;">Porfavor ingrese sus credenciales</p>
     <div class="centrar">
         <div class="input-group " >
             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+            <input id="email" 
+                   type="email" 
+                   class="form-control"  
+                   placeholder="Email" 
+                   ngModel 
+                   name="email"
+                   email
+                   required="">
           </div>
           <br>
         <div class="input-group ">
             <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-            <input id="password" type="password" class="form-control" name="password" placeholder="Contraseña">
+            <input id="password" 
+                   type="password" 
+                   class="form-control" 
+                   name="password" 
+                   ngModel
+                   placeholder="Contraseña"
+                   required
+                   minlength="6">
           </div>
     </div>
     <hr>
-    <button class="btn btn-primary  btnmargin" type="button">Iniciar</button>
-    <button (click)="onRegister()"  class="btn btn-primary  pull-right btnmargin" type="button" >Registrar</button>
+    <button class="btn btn-primary btnmargin" type="submit" [disabled]="!authForm.valid">{{isLoginMode ? 'Iniciar' : 'Registar'}}</button>
+    <button class="btn btn-primary btnmargin" type="button" (click)="onSwitchMode()" >Cambiar a {{ isLoginMode ? 'Registrar' : 'Iniciar Sesion'}}</button>
+    <!-- <button (click)="onRegister()"  class="btn btn-primary btnmargin" type="button" >Registrar</button> -->
   </form>
 <hr>
 

@@ -1,8 +1,12 @@
 .item{
   justify-content: center  !important;
 }
-.mg{
-    
+.mg{ 
     margin: auto;
-  
+}
+.mgl{   
+  margin-left: 5px;
+}
+textarea {
+  resize: none;
 }
