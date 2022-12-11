@@ -25,7 +25,7 @@
           <textarea type="textarea" class="form-control" rows="6" id="comentario" name="comentario" required ngModel></textarea>
         </div>
       <button type="submit" class="btn btn-primary " [disabled]="!postForm.valid">Enviar</button>
-      <button type="button" class="btn btn-danger mgl" >Cancelar</button>
+      <button type="button" class="btn btn-danger mgl" (click)="resetForm(postForm)">Cancelar</button>
     </form>
   </div>
 </div>
