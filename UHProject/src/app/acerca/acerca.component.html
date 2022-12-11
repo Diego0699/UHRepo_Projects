@@ -6,21 +6,26 @@
 <div class="row">
   <div class="col xs-12 col-md-6 col-md-offset-3">
     
-    <form class="form-group ">
-      <div class="form-group  ">
-          <label for="text">Nombre:</label>
-          <input type="text" class="form-control " id="nombrec">
-        </div>
+    <form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value)">
+      <!-- <div class="form-group">
+          <label for="text">Asunto:</label>
+          <input type="text" class="form-control " id="asunto" name="asunto" ngModel>
+      </div> -->
       <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" class="form-control" id="emailc">
+          <label for="text">Asunto:</label>
+         <select class="form-control " id="asunto" name="asunto" required ngModel>
+            <option value="">-- Seleccione --</option>
+            <option value="Consulta">Consulta</option>
+            <option value="Agradecimiento">Agradecimiento</option>
+            <option value="Queja">Queja</option>
+         </select>
       </div>
-      
       <div class="form-group">
           <label for="comment">Comentario:</label>
-          <textarea type="textarea" class="form-control" id="comment" rows="6"></textarea>
+          <textarea type="textarea" class="form-control" rows="6" id="comentario" name="comentario" required ngModel></textarea>
         </div>
-      <button type="submit" class="btn btn-primary ">Enviar</button>
+      <button type="submit" class="btn btn-primary " [disabled]="!postForm.valid">Enviar</button>
+      <button type="button" class="btn btn-danger mgl" (click)="resetForm(postForm)">Cancelar</button>
     </form>
   </div>
 </div>
