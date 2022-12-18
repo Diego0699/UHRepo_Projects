@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import Swal from 'sweetalert2';
 import { AuthResponseData, AuthService } from './auth.service';
 
 @Component({
@@ -38,6 +39,7 @@ export class SesionComponent implements OnInit {
       authObs = this.authService.iniciarSesion(email,password);
     }else{
       authObs = this.authService.registrar(email,password)
+      Swal.fire('Registro', 'Usuario registrado correctamente' ,'success');
     }
 
   
@@ -49,7 +51,7 @@ export class SesionComponent implements OnInit {
       },
       errorMessage =>{
         console.log(errorMessage);
-        this.error = errorMessage;
+        Swal.fire('Error', (errorMessage) ,'error');
         this.isLoading = false;
       }
     )

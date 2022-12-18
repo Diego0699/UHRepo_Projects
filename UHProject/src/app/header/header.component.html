@@ -10,13 +10,13 @@
         <li  routerLinkActive="active2"><a  class="wtext" routerLink="/productos">Productos</a></li>
         <li routerLinkActive="active2"><a  class="wtext" routerLink="/carrito" *ngIf="isAuthenticated">Carrito</a></li>
     </ul>
-    <form class="navbar-form navbar-left" role="search">
+    <!-- <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Buscar"
             disabled>
         </div>
         <button type="button" class="btn btn-primary" style="margin-left: 5px;">Buscar</button>
-    </form>
+    </form> -->
     <ul class="nav navbar-nav navbar-right ">
         <li routerLinkActive="active2"><a  class="wtext" routerLink="sesion" *ngIf="!isAuthenticated">Iniciar Sesión </a></li>
         <li routerLinkActive="active2"><a  class="wtext" (click)="onCerrarSesion()" *ngIf="isAuthenticated">Cerrar Sesión </a></li>

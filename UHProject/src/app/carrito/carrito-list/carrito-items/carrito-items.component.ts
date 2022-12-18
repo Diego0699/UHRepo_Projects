@@ -78,8 +78,4 @@ export class CarritoItemsComponent implements OnInit {
    }
 }
 
-function sumarTotales(){
-  for (let p of this.carritoProductosLista) {
-    this.sumaTotal+=this.carritoProductosLista[2]
-  }
-}
+
