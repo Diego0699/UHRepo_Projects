@@ -6,6 +6,7 @@ import { CarritoCompraService } from 'src/app/carrito/carrito.service';
 import { Product } from '../producto.model';
 import { ProductoService } from '../producto.service';
 import { ArrayType } from '@angular/compiler';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -41,12 +42,11 @@ export class ProductoDetailComponent implements OnInit {
     setTimeout(() => {
       this.detailActivado = false;
     }, 2000);
-    
-   
-
     this.productosSeleccionados.push(this.producto);
     this.productoService.addProductoToCarrito(this.productosSeleccionados);
     console.log(this.productosSeleccionados);
+    Swal.fire('Agregado', 'El producto: '+(this.producto.name)+' se agregó correctamente!','success');
+        
    
   }
 

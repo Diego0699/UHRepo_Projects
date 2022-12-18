@@ -29,9 +29,15 @@ export class CarritoListComponent implements OnInit {
     this.Subtotalf=0;
     this.IVAf=0;
     this.Totalf=0;
+    this.SumaTotal();
   
   }
   datosDetalle(lista:[]){
     console.log(lista);
   }
+   SumaTotal() {
+    const Totalf =  this.CarritoProductos.map(({price}) => price).reduce((value1, value2) => value1 + value2, 0);
+    return Totalf;
+  }
+  
 }

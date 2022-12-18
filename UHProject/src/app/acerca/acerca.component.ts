@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
+import { __values } from 'tslib';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-acerca',
@@ -9,10 +11,13 @@ import { NgForm } from '@angular/forms';
 })
 export class AcercaComponent implements OnInit {
   postForm: NgForm;
+  postData:{};
   
 
-  constructor(private http: HttpClient) { }
-
+  constructor(private http: HttpClient) {
+   
+   }
+  
   ngOnInit(): void {
   }
   onCreatePost(postData:{asunto:string; comentario:string}){
@@ -24,17 +29,12 @@ export class AcercaComponent implements OnInit {
     )
     .subscribe(responseData => {
       console.log(responseData);
-      this.postForm.setValue==null;
     });
-    this.postForm.reset();
-  
+    Swal.fire('Enviado', 'Mensaje enviado correctamente! ' ,'success');
+    this.resetForm
   }
+  
   resetForm(postForm: NgForm) {
-    // postForm.reset()
-   postForm.setValue({
-    asunto:'-- Seleccione --',
-    comentario:'hola'
-   })
-
+    postForm.reset()
   }
 }
